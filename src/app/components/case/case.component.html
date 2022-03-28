@@ -1,0 +1,83 @@
+<div class="top-menu">
+    <span class="spacer"></span>
+    <div class="top-buttons">
+        <div class="save-btn">
+            <button mat-raised-button class="case-btn" (click)="saveCase()">SAVE</button>
+        </div>
+    </div>
+</div>
+<div class="case-formgroup-container" [formGroup]="caseForm" (keydown.enter)="$event.preventDefault()">
+    <mat-card class="case-card case-info" id='case-info'>
+        <mat-card-header>
+            <mat-card-title>Case Info  <span class="case-no" *ngIf="id"> : {{id}}</span></mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="case-card-content">
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field case-type-field">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="type">
+                      <mat-option *ngFor="let type of types" [value]="type.code">
+                        {{type.value}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="caseForm.get('type')?.hasError('required')">
+                        Type is required.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="case-form-field" appearance="fill">
+                    <mat-label>Status</mat-label>
+                    <input readonly matInput placeholder="" formControlName="status" autocomplete="off" />
+                </mat-form-field>
+            </div>
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field">
+                    <mat-label>Agent</mat-label>
+                    <mat-select formControlName="agent">
+                      <mat-option *ngFor="let agent of agents" [value]="agent.code">
+                        {{agent.value}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="caseForm.get('agent')?.hasError('required')">
+                        Agent is required.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="project-form-field contract name" appearance="fill" >
+                    <mat-label>Created At</mat-label>
+                    <input readonly matInput placeholder="" formControlName="createdAt" autocomplete="off" />
+                </mat-form-field>
+            </div>
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="5" formControlName="description" required></textarea>
+                    <mat-error *ngIf="caseForm.get('description')?.hasError('required')">
+                        Description is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field">
+                    <mat-label>Allocated To</mat-label>
+                    <input matInput placeholder="" formControlName="allocatedTo" autocomplete="off" />
+                </mat-form-field>
+            </div>
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field">
+                    <mat-label>Action</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="5" formControlName="action" ></textarea>
+                </mat-form-field>
+            </div>
+            <div class="case-form-row">
+                <mat-form-field class="case-form-field" appearance="fill">
+                    <mat-label>Responded At</mat-label>
+                    <input readonly matInput placeholder="" formControlName="respondedAt" autocomplete="off" />
+                </mat-form-field>
+                <mat-form-field class="case-form-field">
+                    <mat-label>Feedback</mat-label>
+                    <input matInput placeholder="" formControlName="feedback" autocomplete="off" />
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card><!-- end of case-info-->
+</div>
+<p>{{caseForm.value | json}}</p><!--  -->

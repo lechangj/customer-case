@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="app-toolbar" >
+
+  <ng-container *ngIf="(companyInfo$ | async) as companyInfo">
+    <img class="app-logo" [src]="companyInfo.logoUrl" alt="Logo" (click)="home()">
+    <h3>{{companyInfo.title}}</h3>
+    <span class="spacer"></span>
+    <div class="app-phone-wrapper" fxLayout fxLayoutAlign="center center">
+        <mat-icon class="app-phone-icon">phone</mat-icon>
+        <p class="app-phone">{{companyInfo.phone}}</p>
+    </div> 
+  </ng-container>
+  <ng-container *ngIf="isLoggedIn$ | async">
+    <p class="user-id"><span class="user">{{email$ | async}}</span></p>
+    <mat-icon class="logout" title="Logout" (click)="logout()">exit_to_app</mat-icon>
+  </ng-container>
+</mat-toolbar>
+
+<mat-sidenav-container [hasBackdrop]="false" autosize class="app-container">
+  <mat-sidenav-content class="app-main-container">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

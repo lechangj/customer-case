@@ -1,0 +1,58 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 12rem 0;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+.login-button {
+  margin-bottom: 2rem;
+}
+
+.login-card {
+  min-height: 30vh;
+}
+
+.login-card-header {
+  margin-bottom: 12px;
+
+  .mat-card-header-text {
+    width: 100%;
+
+    .login-card-title {
+      display: flex;
+      margin-top: 12px;
+    }
+  }
+}
+
+.login-card-content {
+  width: 100%;
+  position: relative;
+}
+
+.login-company {
+  margin-bottom: 2rem;
+}
+
+.login-logo {
+  width: 20rem;
+}
+
+.login-phone-wrapper {
+  padding: 1rem 3rem;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.login-phone {
+  margin: 0 0 0 6px;
+}
+
+.mat-card-actions {
+  margin-bottom: 0 !important;
+}

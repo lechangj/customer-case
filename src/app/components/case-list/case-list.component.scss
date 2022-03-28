@@ -1,0 +1,49 @@
+.case-list {
+  width: 95vw;
+  margin: 0 auto;
+}
+.table-container {
+  overflow: auto;
+  height: 72vh;
+}
+.cases-table {
+  width: 100%;
+  max-height: 72vh;
+}
+.search-form {
+  margin-top: 1rem;
+}
+.spinner-container {
+  height: 80vh;
+  width: 100vw;
+  position: fixed;
+}
+.spinner-container mat-spinner {
+  margin: 10rem auto 0 auto;
+}
+.cases-table tr.selected {
+  background-color: #b2fbf4;
+}
+.new-case-btn {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  z-index: 110;
+  background-color: #f374af;
+  color: #fff;
+}
+.detail-link-btn {
+  background-color: hsl(195, 36%, 96%);
+  color: #738feb;
+}
+.search-input {
+  width: 20rem;
+}
+
+.mat-row:hover {
+  background-color: #dbeaf5;
+}
+
+.mat-header-row {
+  background-color: #edebb5;
+}

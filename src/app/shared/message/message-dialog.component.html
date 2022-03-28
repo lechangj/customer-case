@@ -1,0 +1,24 @@
+<h2 mat-dialog-title *ngIf="style==1">
+    {{title}}
+</h2>
+<mat-dialog-content>
+    <p>{{message}}</p>
+    <p *ngIf="information!==''">{{information}}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div *ngIf="button==0">
+        <button mat-button class="message-dialog-btn" (click)="onOk()" cdkFocusInitial>OK</button>
+    </div>
+    <div *ngIf="button==1">
+        <button mat-button class="message-dialog-btn" (click)="onOk()" tabindex="-1">OK</button>
+        <button mat-button class="message-dialog-btn" (click)="onCancel()" tabindex="-1">CANCEL</button>
+    </div>
+    <div *ngIf="button==2">
+        <button mat-button class="message-dialog-btn" (click)="onYes()" tabindex="-1">YES</button>
+        <button mat-button class="message-dialog-btn" (click)="onNo()" tabindex="-1">NO</button>
+    </div>
+    <div *ngIf="button==3">
+        <button mat-button class="message-dialog-btn" (click)="onAccept()" tabindex="-1">ACCEPT</button>
+        <button mat-button class="message-dialog-btn" (click)="onReject()" tabindex="-1">REJECT</button>
+    </div>
+</mat-dialog-actions>

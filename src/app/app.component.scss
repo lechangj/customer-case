@@ -1,0 +1,44 @@
+.app-container {
+  min-height: calc(100vh - 75px);
+}
+
+.app-main-container {
+  min-height: calc(100% - 75px);
+  height: 100%;
+}
+
+.app-toolbar {
+  min-height: 75px;
+  color: #e8e8eb;
+}
+
+.app-logo {
+  max-height: 95%;
+  margin: 0 2rem 0 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.app-phone-wrapper {
+  display: flex;
+  font-size: 0.8em;
+  align-items: center;
+}
+
+.app-phone {
+  margin: 0 1rem 0 6px;
+}
+
+.app-phone-icon {
+  transform: scale(0.8);
+}
+
+.logout {
+  cursor: pointer;
+  margin: 0 10px 0 15px;
+}
+
+.user-id {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}

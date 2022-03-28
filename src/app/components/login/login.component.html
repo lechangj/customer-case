@@ -1,0 +1,40 @@
+<mat-card class="login-card" mat-elevation-z16>
+    <mat-card-header class="login-card-header" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card-title class="mat-h1">Welcome</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="login-formgroup-container" [formGroup]="loginForm" (keyup.enter)="onSubmit()" 
+            fxLayout="column" fxLayoutAlign="center center">
+            <!-- <div class="login-company" fxLayout="column" fxLayoutAlign="center center">
+                <img class="login-logo" [src]="companyInfo.imageUrl" alt="Logo">
+                <div class="login-phone-wrapper" fxLayout fxLayoutAlign="center center">
+                    <mat-icon class="phone-icon">phone</mat-icon>
+                    <p class="login-phone">{{companyInfo.phone}}</p>
+                </div>                
+            </div> -->
+            <div class="form-group" fxLayout="column">
+                <div class="form-field">
+                    <mat-form-field floatLabel="always">
+                        <mat-label>Username</mat-label>
+                        <input type="text" id="userId" matInput placeholder="Username" formControlName="userId" required autofocus>
+                        <mat-error *ngIf="loginForm.get('userId')?.hasError('required')">
+                          Username is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-field">
+                    <mat-form-field floatLabel="always">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput placeholder="Password" formControlName="password" required>
+                        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                          Password is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <button class="login-button" mat-raised-button (click)="onSubmit()" color="primary">Login</button>
+    </mat-card-actions>
+</mat-card>

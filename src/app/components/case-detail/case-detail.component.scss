@@ -1,0 +1,59 @@
+.top-menu {
+  display: flex;
+  align-items: center;
+  background-color: #eaecee;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  margin: 0.5rem 0;
+  & div {
+    margin-right: 1rem;
+  }
+}
+
+.case-btn {
+  background-color: #88a3b7;
+  color: #fcfcfc;
+  margin-left: 1.5rem;
+}
+
+.case-card {
+  margin-bottom: 1rem;
+  margin: 1rem 5px;
+  background-color: #f1f1f1;
+}
+
+.case-card-content {
+  background-color: #fcfcfc;
+  padding: 0.5rem;
+}
+
+.case-row {
+  display: flex;
+  padding-left: 3rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.case-prop {
+  min-width: 30%;
+  display: flex;
+
+  & .qp-label {
+    min-width: 9rem;
+    margin-right: 2em;
+    font-weight: 500;
+  }
+}
+
+.two-prop {
+  min-width: 60%;
+}
+
+.qp-text.case-no {
+  cursor: pointer;
+  color: #057074;
+  font-weight: 500;
+}

@@ -1,0 +1,65 @@
+<div *ngxAllow="['ADMIN']" class="top-menu">
+    <span class="spacer"></span>
+    <div class="top-buttons">
+        <div class="edit-btn">
+            <button mat-raised-button class="case-btn" (click)="editCase()">EDIT</button>
+        </div>
+    </div>
+</div>
+<ng-container *ngIf="caseInstance$ | async as case">
+    <mat-card class="case-card case-info" id='case-info'>
+        <mat-card-header>
+            <mat-card-title>Case Detail</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="case-card-content">
+            <div class="case-row">
+                <div class="case-prop two-prop">
+                    <span class="qp-label">Type: </span> <span class="qp-text">{{case.type}}</span>
+                </div>
+                <div class="case-prop">
+                    <span class="qp-label">Id:</span> <span class="qp-text case-no">{{case.id}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop two-prop">
+                    <span class="qp-label">Agent: </span> <span class="qp-text">{{case.agent}}</span>
+                </div>
+                <div class="case-prop">
+                    <span class="qp-label">Created At: </span> <span class="qp-text">{{case.createdAt}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Description: </span> <span class="qp-text">{{case.description}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Allocated To: </span> <span class="qp-text">{{case.allocatedTo}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Action: </span> <span class="qp-text">{{case.action}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Responded At: </span> <span class="qp-text">{{case.respondedAt}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Status: </span> <span class="qp-text">{{case.status}}</span>
+                </div>
+            </div>
+            <div class="case-row">
+                <div class="case-prop">
+                    <span class="qp-label">Feedback: </span> <span class="qp-text">{{case.feedback}}</span>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    
+    
+</ng-container>

@@ -1,0 +1,46 @@
+.top-menu {
+  display: flex;
+  align-items: center;
+  background-color: #eaecee;
+  padding: 1em 0 0 0;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  & div {
+    margin-right: 1rem;
+  }
+}
+
+.case-btn {
+  background-color: #88a3b7;
+  color: #fcfcfc;
+  margin-left: 1.5rem;
+}
+
+.case-card {
+  margin: 1rem 5px;
+  background-color: #f1f1f1;
+}
+
+.case-card-content {
+  background-color: #fcfcfc;
+  padding: 0.5rem;
+}
+
+.case-formgroup-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(234, 236, 238);
+}
+
+.case-form-row {
+  display: flex;
+}
+
+.case-form-field {
+  width: 28%;
+  margin-right: 2%;
+}

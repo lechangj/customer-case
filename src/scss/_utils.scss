@@ -1,0 +1,40 @@
+.mt10px {
+  margin-top: 10px;
+}
+
+.mt20px {
+  margin-top: 20px;
+}
+
+.mr10px {
+  margin-right: 10px;
+}
+
+.ml10px {
+  margin-left: 10px;
+}
+
+.mb10px {
+  margin-bottom: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.spacer1 {
+  flex-basis: 1rem;
+}
+
+.space10 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.group-legend {
+  padding: 0 0 0 7px;
+  margin-bottom: -1rem !important;
+  font-style: italic;
+  font-weight: 500;
+  color: #a69ec7;
+}
