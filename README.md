@@ -45,7 +45,7 @@ The project is composed of the following components.
 
 - ### Front-end server
 
-  Run `npm start` for the API server. Navigate to `http://localhost:4200/`.
+  Run `npm start` for the front-end server. Navigate to `http://localhost:4200/`.
 
 <br/>
 
