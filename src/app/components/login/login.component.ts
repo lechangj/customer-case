@@ -17,9 +17,6 @@ export class LoginComponent  implements OnInit, OnDestroy {
   returnUrl: string[] = [];
   
   loginForm!: FormGroup;
-  // companyInfo;
-  // sellerId: string;
-  // sellerId$: Observable<string>;
 
 
   constructor(
